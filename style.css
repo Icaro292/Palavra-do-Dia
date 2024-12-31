@@ -26,26 +26,33 @@ h1 {
 
 .input-container {
     margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 input {
     width: 80%;
     padding: 10px;
-    font-size: 1em;
+    font-size: 1.2em;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 button {
+    width: 80%;
     padding: 10px 20px;
     background-color: #2C3E50;
     color: white;
-    font-size: 1em;
+    font-size: 1.2em;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-sizing: border-box;
 }
 
 button:hover {
@@ -108,6 +115,10 @@ footer a:hover {
         font-size: 1em;
     }
 
+    .input-container {
+        width: 100%;
+    }
+
     input {
         width: 90%;
         font-size: 1.2em;
@@ -122,10 +133,5 @@ footer a:hover {
     footer {
         font-size: 0.9em;
         padding: 8px 0;
-    }
-
-    #audioContainer iframe {
-        width: 100% !important;
-        height: 100% !important;
     }
 }
