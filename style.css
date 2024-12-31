@@ -9,6 +9,11 @@ body {
     transition: background-color 1s ease;
 }
 
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
 .word {
     font-size: 1.5em;
     margin: 20px 0;
@@ -23,21 +28,42 @@ body {
     margin: 20px 0;
 }
 
+input {
+    width: 80%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2C3E50;
+    color: white;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #34495E;
+}
+
 .feedback {
     margin-top: 20px;
     font-size: 1.2em;
     color: #2c3e50;
-    animation: fadeIn 1s ease-in-out;
 }
 
 .correct {
     color: green;
-    font-weight: bold;
 }
 
 .incorrect {
     color: red;
-    font-weight: bold;
 }
 
 .stats {
@@ -45,29 +71,18 @@ body {
     font-size: 1.2em;
 }
 
-/* Efeito de Fade-In para a resposta */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Estilos do rodapé */
 footer {
     position: fixed;
     bottom: 0;
-    left: 0; /* Garante que o rodapé fique alinhado à esquerda */
-    width: 100%; /* Faz com que o rodapé ocupe toda a largura da tela */
+    left: 0;
+    width: 100%;
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
     font-size: 1em;
-    z-index: 100; /* Garante que o rodapé fique acima de outros elementos */
-    box-sizing: border-box; /* Garante que o padding não afete a largura do rodapé */
+    z-index: 100;
+    box-sizing: border-box;
 }
 
 footer p {
@@ -84,27 +99,33 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Ajustes para telas pequenas */
 @media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .word, .hint, .feedback, .stats {
+        font-size: 1em;
+    }
+
+    input {
+        width: 90%;
+        font-size: 1.2em;
+    }
+
+    button {
+        width: 90%;
+        font-size: 1.2em;
+        padding: 12px;
+    }
+
     footer {
-        font-size: 0.9em; /* Reduz o tamanho da fonte em dispositivos pequenos */
-        padding: 8px 0;  /* Menos padding para não ocupar tanto espaço */
+        font-size: 0.9em;
+        padding: 8px 0;
     }
 
-    .word {
-        font-size: 1.2em;  /* Ajusta o tamanho da palavra em telas pequenas */
-    }
-
-    .hint {
-        font-size: 1em; /* Ajusta o tamanho da dica */
-    }
-
-    .input-container {
-        width: 90%;  /* Maior largura para o campo de entrada */
-    }
-
-    input[type="text"], button {
-        font-size: 1em; /* Ajuste de tamanho para dispositivos móveis */
-        width: 100%;
+    #audioContainer iframe {
+        width: 100% !important;
+        height: 100% !important;
     }
 }

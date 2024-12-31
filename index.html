@@ -11,11 +11,12 @@
 
     <h1>Palavra do Dia</h1>
     
-    <div class="hint" id="hint">Dica: A resposta é uma cor!</div>
+    <div class="hint" id="hint"></div>
     
     <div class="input-container">
         <input type="text" id="userInput" placeholder="Digite sua resposta" />
         <button id="submitBtn" onclick="checkAnswer()">Enviar</button>
+        <button id="restartBtn" onclick="restartGame()" style="display: none;">Reiniciar</button>
     </div>
     
     <div class="feedback" id="feedback"></div>
@@ -24,12 +25,11 @@
 
     <div id="audioContainer"></div>
 
-    <button id="restartBtn" onclick="restartGame()" style="display: none;">Reiniciar</button>
-
-    <script src="script.js"></script>
     <footer>
         <p>&copy; 2024 Ícaro-Dev. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
