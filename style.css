@@ -1,0 +1,80 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: #1D2A44;
+    color: white;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 1s ease;
+}
+
+.word {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.hint {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.input-container {
+    margin: 20px 0;
+}
+
+.feedback {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+.stats {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+/* Estilos do rodapé */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Garante que o rodapé fique alinhado à esquerda */
+    width: 100%; /* Faz com que o rodapé ocupe toda a largura da tela */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1em;
+    z-index: 100; /* Garante que o rodapé fique acima de outros elementos */
+    box-sizing: border-box; /* Garante que o padding não afete a largura do rodapé */
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 600px) {
+    footer {
+        font-size: 0.9em; /* Reduz o tamanho da fonte em dispositivos pequenos */
+        padding: 8px 0;  /* Menos padding para não ocupar tanto espaço */
+    }
+}
