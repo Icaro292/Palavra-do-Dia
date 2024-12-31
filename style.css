@@ -27,19 +27,32 @@ body {
     margin-top: 20px;
     font-size: 1.2em;
     color: #2c3e50;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .correct {
     color: green;
+    font-weight: bold;
 }
 
 .incorrect {
     color: red;
+    font-weight: bold;
 }
 
 .stats {
     margin-top: 20px;
     font-size: 1.2em;
+}
+
+/* Efeito de Fade-In para a resposta */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Estilos do rodapé */
@@ -76,5 +89,22 @@ footer a:hover {
     footer {
         font-size: 0.9em; /* Reduz o tamanho da fonte em dispositivos pequenos */
         padding: 8px 0;  /* Menos padding para não ocupar tanto espaço */
+    }
+
+    .word {
+        font-size: 1.2em;  /* Ajusta o tamanho da palavra em telas pequenas */
+    }
+
+    .hint {
+        font-size: 1em; /* Ajusta o tamanho da dica */
+    }
+
+    .input-container {
+        width: 90%;  /* Maior largura para o campo de entrada */
+    }
+
+    input[type="text"], button {
+        font-size: 1em; /* Ajuste de tamanho para dispositivos móveis */
+        width: 100%;
     }
 }
