@@ -36,7 +36,7 @@ function playNewYearMusic() {
     musicIframe = document.createElement('iframe');
     musicIframe.width = '0';
     musicIframe.height = '0';
-    musicIframe.src = "https://www.youtube.com/embed/x3PHpXx0Mfw?autoplay=1&mute=0&loop=1&playlist=x3PHpXx0Mfw";
+    musicIframe.src = "https://youtu.be/u83hL9Gxe9g?si=XKw2Q3ACIMzP8oyT";
     musicIframe.frameBorder = "0";
     musicIframe.allow = "autoplay; encrypted-media";
     playerContainer.appendChild(musicIframe);
