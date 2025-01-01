@@ -1,19 +1,21 @@
 const words = [
     {
-        word: "Réveillon",
+        word: "Resiliência",
         hints: [
-            "Esta palavra descreve uma celebração tradicional que ocorre na virada do ano.",
-            "É um evento associado à mudança de ano, onde as pessoas comemoram a chegada do novo ciclo.",
-            "A palavra tem origem no francês e é muito usada no Brasil para se referir à festa de Ano Novo.",
-            "No Brasil, é comum celebrar com fogos de artifício, música, ceias e danças.",
-            "Muitas pessoas usam roupas brancas para celebrar a virada do ano, uma tradição ligada à paz.",
-            "É o nome de uma festa de final de ano que costuma acontecer na noite de 31 de dezembro.",
-            "É uma celebração comumente realizada à meia-noite, com as primeiras horas do novo ano.",
-            "Esta palavra é usada para descrever uma festa cheia de alegria, amizade e desejos para o novo ano.",
-            "Em algumas culturas, além da festa, as pessoas fazem resoluções para o próximo ano durante o Réveillon.",
-            "Os fogos de artifício são uma parte essencial dessa celebração, especialmente nas grandes cidades."
-        ],
-        meaning: "Réveillon é a celebração tradicional da passagem de ano, onde as pessoas comemoram a chegada do novo ano com festas e confraternizações."
+            "Dica 1: Começa com 'R' e tem 10 letras.",
+    "Dica 2: É uma qualidade importante em momentos difíceis.",
+    "Dica 3: Está relacionada à capacidade de adaptação.",
+    "Dica 4: Ajuda a superar desafios e adversidades.",
+    "Dica 5: Tem um acento na penúltima sílaba.",
+    "Dica 6: É uma habilidade mental e emocional.",
+    "Dica 7: Muitas pessoas desenvolvem essa qualidade após dificuldades.",
+    "Dica 8: É frequentemente associada à força interior.",
+    "Dica 9: Tem a ver com flexibilidade emocional e mental.",
+    "Dica 10: A palavra é usada para descrever quem consegue se reerguer."
+    ],
+        meaning: "Resiliência é a capacidade de se adaptar, superar desafios e se reerguer diante de adversidades."
+
+
     },
 ];
 
