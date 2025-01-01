@@ -69,7 +69,7 @@ function checkAnswer() {
 
     if (userInput === correctAnswer) {
         correctAttempts++;
-        feedback.innerHTML = `Parabéns! Você acertou. <br> FELIZ ANO NOVO 🎉🎆🥂🎊🍾`;
+        feedback.innerHTML = `Parabéns! Você acertou. <br> 🎉🎆🥂🎊🍾`;
         feedback.className = "feedback correct";
 
         playNewYearMusic();
