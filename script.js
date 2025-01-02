@@ -1,21 +1,19 @@
 const words = [
     {
-        word: "Resiliência",
+        word: "Empatia",
         hints: [
-            "Dica 1: Começa com 'R' e tem 10 letras.",
-    "Dica 2: É uma qualidade importante em momentos difíceis.",
-    "Dica 3: Está relacionada à capacidade de adaptação.",
-    "Dica 4: Ajuda a superar desafios e adversidades.",
-    "Dica 5: Tem um acento na penúltima sílaba.",
-    "Dica 6: É uma habilidade mental e emocional.",
-    "Dica 7: Muitas pessoas desenvolvem essa qualidade após dificuldades.",
-    "Dica 8: É frequentemente associada à força interior.",
-    "Dica 9: Tem a ver com flexibilidade emocional e mental.",
-    "Dica 10: A palavra é usada para descrever quem consegue se reerguer."
-    ],
-        meaning: "Resiliência é a capacidade de se adaptar, superar desafios e se reerguer diante de adversidades."
-
-
+            "Dica 1: Começa com 'E' e tem 7 letras.",
+            "Dica 2: É uma qualidade importante nas relações humanas.",
+            "Dica 3: Está relacionada à capacidade de se colocar no lugar do outro.",
+            "Dica 4: Ajuda a compreender e compartilhar os sentimentos de outra pessoa.",
+            "Dica 5: Tem um significado ligado à conexão emocional.",
+            "Dica 6: É frequentemente associada a comportamentos de apoio e compreensão.",
+            "Dica 7: Uma pessoa empática é capaz de demonstrar cuidado e compaixão.",
+            "Dica 8: É essencial para a construção de relações saudáveis.",
+            "Dica 9: Está relacionada à escuta ativa e compreensão profunda.",
+            "Dica 10: Essa habilidade pode ser desenvolvida ao longo do tempo."
+        ],
+        meaning: "Empatia é a capacidade de compreender e compartilhar os sentimentos de outra pessoa, colocando-se no lugar dela, e se demonstrando solidário com suas emoções e experiências."
     },
 ];
 
@@ -29,20 +27,21 @@ let musicIframe = null;
 
 document.getElementById("hint").textContent = currentWord.hints[currentHintIndex];
 
-function playNewYearMusic() {
+function playCelebrationMusic() {
+    // Se a música já estiver tocando, não cria outro iframe
     if (musicIframe) return;
 
     const playerContainer = document.getElementById('audioContainer');
     musicIframe = document.createElement('iframe');
-    musicIframe.width = '0';
-    musicIframe.height = '0';
-    musicIframe.src = "https://youtu.be/u83hL9Gxe9g?si=XKw2Q3ACIMzP8oyT";
+    musicIframe.width = '560';  // Largura ajustada para a incorporação do vídeo
+    musicIframe.height = '315';  // Altura ajustada para o vídeo
+    musicIframe.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";  // Exemplo de música de comemoração, você pode trocar a URL para a que desejar
     musicIframe.frameBorder = "0";
     musicIframe.allow = "autoplay; encrypted-media";
     playerContainer.appendChild(musicIframe);
 }
 
-function stopNewYearMusic() {
+function stopCelebrationMusic() {
     if (musicIframe) {
         musicIframe.remove();
         musicIframe = null;
@@ -72,7 +71,8 @@ function checkAnswer() {
         feedback.innerHTML = `Parabéns! Você acertou. <br> 🎉🎆🥂🎊🍾`;
         feedback.className = "feedback correct";
 
-        playNewYearMusic();
+        // Toca a música de comemoração quando o usuário acerta
+        playCelebrationMusic();
 
         document.getElementById("submitBtn").style.display = "none";
         document.getElementById("restartBtn").style.display = "inline-block";
@@ -92,7 +92,7 @@ function checkAnswer() {
 }
 
 function restartGame() {
-    stopNewYearMusic();
+    stopCelebrationMusic();
 
     attempts = 0;
     correctAttempts = 0;
