@@ -34,7 +34,7 @@ function playCelebrationMusic() {
     musicIframe = document.createElement('iframe');
     musicIframe.width = '0';
     musicIframe.height = '0';
-    musicIframe.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
+    musicIframe.src = "";
     musicIframe.frameBorder = "0";
     musicIframe.allow = "autoplay; encrypted-media";
     playerContainer.appendChild(musicIframe);
