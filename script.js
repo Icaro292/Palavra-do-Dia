@@ -28,14 +28,13 @@ let musicIframe = null;
 document.getElementById("hint").textContent = currentWord.hints[currentHintIndex];
 
 function playCelebrationMusic() {
-    // Se a música já estiver tocando, não cria outro iframe
     if (musicIframe) return;
 
     const playerContainer = document.getElementById('audioContainer');
     musicIframe = document.createElement('iframe');
-    musicIframe.width = '560';  // Largura ajustada para a incorporação do vídeo
-    musicIframe.height = '315';  // Altura ajustada para o vídeo
-    musicIframe.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";  // Exemplo de música de comemoração, você pode trocar a URL para a que desejar
+    musicIframe.width = '0';
+    musicIframe.height = '0';
+    musicIframe.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
     musicIframe.frameBorder = "0";
     musicIframe.allow = "autoplay; encrypted-media";
     playerContainer.appendChild(musicIframe);
@@ -70,21 +69,16 @@ function checkAnswer() {
         correctAttempts++;
         feedback.innerHTML = `Parabéns! Você acertou. <br> 🎉🎆🥂🎊🍾`;
         feedback.className = "feedback correct";
-
-        // Toca a música de comemoração quando o usuário acerta
         playCelebrationMusic();
-
         document.getElementById("submitBtn").style.display = "none";
         document.getElementById("restartBtn").style.display = "inline-block";
     } else {
         feedback.textContent = `Você acertou ${correctLetters} letra(s) correta(s). Tente novamente!`;
         feedback.className = "feedback incorrect";
-
         currentHintIndex++;
         if (currentHintIndex >= currentWord.hints.length) {
             currentHintIndex = 0;
         }
-
         document.getElementById("hint").textContent = currentWord.hints[currentHintIndex];
     }
 
