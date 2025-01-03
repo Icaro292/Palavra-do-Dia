@@ -127,11 +127,6 @@ footer a:hover {
     button {
         width: 90%;
         font-size: 1.2em;
-        padding: 12px;
-    }
-
-    footer {
-        font-size: 0.9em;
-        padding: 8px 0;
+        padding: 12px 20px;
     }
 }
