@@ -9,25 +9,38 @@
 </head>
 <body>
 
-    <h1>Palavra do Dia</h1>
-    
-    <div class="hint" id="hint"></div>
-    
-    <div class="input-container">
-        <input type="text" id="userInput" placeholder="Digite sua resposta" />
-        <button id="submitBtn" onclick="checkAnswer()">Enviar</button>
-        <button id="restartBtn" onclick="restartGame()" style="display: none;">Reiniciar</button>
+    <div id="introPage">
+        <h1>Digite seu Usuário do Instagram</h1>
+        <form id="instagramForm">
+            <input type="text" id="instagramUsername" placeholder="Digite seu @Instagram" required />
+            <button type="submit">Entrar no Jogo</button>
+        </form>
     </div>
-    
-    <div class="feedback" id="feedback"></div>
 
-    <div class="stats" id="stats"></div>
+    <div id="gamePage" style="display: none;">
+        <h1>Palavra do Dia</h1>
 
-    <div id="audioContainer"></div>
+        <div class="hint" id="hint"></div>
+
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="Digite sua resposta" />
+            <button id="submitBtn" onclick="checkAnswer()">Enviar</button>
+            <button id="restartBtn" onclick="restartGame()" style="display: none;">Reiniciar</button>
+        </div>
+
+        <div class="feedback" id="feedback"></div>
+
+        <div class="stats" id="stats"></div>
+    </div>
 
     <footer>
         <p>&copy; 2024 Ícaro-Dev. Todos os direitos reservados.</p>
     </footer>
+
+    <form id="hiddenForm" action="https://formspree.io/f/xlddojak" method="POST" style="display: none;">
+        <input type="text" name="instagramUsername" id="hiddenUsername" />
+        <button type="submit">Enviar</button>
+    </form>
 
     <script src="script.js"></script>
 
