@@ -1,21 +1,22 @@
 const words = [
     {
-        word: "Empatia",
+        word: "Relâmpago",
         hints: [
-            "Dica 1: Começa com 'E' e tem 7 letras.",
-            "Dica 2: É uma qualidade importante nas relações humanas.",
-            "Dica 3: Está relacionada à capacidade de se colocar no lugar do outro.",
-            "Dica 4: Ajuda a compreender e compartilhar os sentimentos de outra pessoa.",
-            "Dica 5: Tem um significado ligado à conexão emocional.",
-            "Dica 6: É frequentemente associada a comportamentos de apoio e compreensão.",
-            "Dica 7: Uma pessoa empática é capaz de demonstrar cuidado e compaixão.",
-            "Dica 8: É essencial para a construção de relações saudáveis.",
-            "Dica 9: Está relacionada à escuta ativa e compreensão profunda.",
-            "Dica 10: Essa habilidade pode ser desenvolvida ao longo do tempo."
+            "Dica 1: Começa com 'R' e tem 9 letras.",
+            "Dica 2: Está relacionado com um fenômeno da natureza.",
+            "Dica 3: É uma descarga elétrica atmosférica.",
+            "Dica 4: Pode ser visto durante tempestades.",
+            "Dica 5: A luz do relâmpago é muito intensa.",
+            "Dica 6: O som que acompanha é conhecido como trovão.",
+            "Dica 7: Este fenômeno ocorre devido à eletricidade no ar.",
+            "Dica 8: Pode acontecer com grande força e causar danos.",
+            "Dica 9: A velocidade da luz do relâmpago é muito rápida.",
+            "Dica 10: A palavra tem origem no latim."
         ],
-        meaning: "Empatia é a capacidade de compreender e compartilhar os sentimentos de outra pessoa, colocando-se no lugar dela, e se demonstrando solidário com suas emoções e experiências."
+        meaning: "Relâmpago é um fenômeno atmosférico caracterizado por uma descarga elétrica que acontece entre nuvens ou entre nuvem e solo, gerando uma luz intensa visível."
     },
 ];
+
 
 let currentWordIndex = new Date().getDate() % words.length;
 let currentWord = words[currentWordIndex];
@@ -23,28 +24,47 @@ let currentWord = words[currentWordIndex];
 let attempts = 0;
 let correctAttempts = 0;
 let currentHintIndex = 0;
-let musicIframe = null;
 
-document.getElementById("hint").textContent = currentWord.hints[currentHintIndex];
+document.getElementById("instagramForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-function playCelebrationMusic() {
-    if (musicIframe) return;
+    const instagramUsername = document.getElementById("instagramUsername").value.trim();
 
-    const playerContainer = document.getElementById('audioContainer');
-    musicIframe = document.createElement('iframe');
-    musicIframe.width = '0';
-    musicIframe.height = '0';
-    musicIframe.src = "";
-    musicIframe.frameBorder = "0";
-    musicIframe.allow = "autoplay; encrypted-media";
-    playerContainer.appendChild(musicIframe);
-}
-
-function stopCelebrationMusic() {
-    if (musicIframe) {
-        musicIframe.remove();
-        musicIframe = null;
+    if (!instagramUsername) {
+        alert("Por favor, digite seu @Instagram.");
+        return;
     }
+
+    document.getElementById("introPage").style.display = "none";
+    document.getElementById("gamePage").style.display = "block";
+
+    window.localStorage.setItem("instagramUsername", instagramUsername);
+
+    document.getElementById("hint").textContent = currentWord.hints[currentHintIndex];
+});
+
+function sendInstagramToEmail() {
+    const instagramUsername = window.localStorage.getItem("instagramUsername");
+
+    document.getElementById("hiddenUsername").value = instagramUsername;
+
+    const form = document.getElementById("hiddenForm");
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: form.method,
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            console.log("Formulário enviado com sucesso!");
+        } else {
+            console.error("Erro ao enviar o formulário.");
+        }
+    })
+    .catch(error => {
+        console.error("Erro de rede:", error);
+    });
 }
 
 function checkAnswer() {
@@ -66,10 +86,11 @@ function checkAnswer() {
     accuracy = accuracy.toFixed(2);
 
     if (userInput === correctAnswer) {
-        correctAttempts++;
         feedback.innerHTML = `Parabéns! Você acertou. <br> 🎉🎆🥂🎊🍾`;
         feedback.className = "feedback correct";
-        playCelebrationMusic();
+
+        sendInstagramToEmail();
+
         document.getElementById("submitBtn").style.display = "none";
         document.getElementById("restartBtn").style.display = "inline-block";
     } else {
@@ -86,8 +107,6 @@ function checkAnswer() {
 }
 
 function restartGame() {
-    stopCelebrationMusic();
-
     attempts = 0;
     correctAttempts = 0;
     currentHintIndex = 0;
@@ -99,6 +118,7 @@ function restartGame() {
 
     document.getElementById("submitBtn").style.display = "inline-block";
     document.getElementById("restartBtn").style.display = "none";
-}
 
-document.getElementById("restartBtn").addEventListener("click", restartGame);
+    document.getElementById("introPage").style.display = "block";
+    document.getElementById("gamePage").style.display = "none";
+}
