@@ -1,20 +1,20 @@
 const words = [
     {
-        word: "Relâmpago",
-        hints: [
-            "Dica 1: Começa com 'R' e tem 9 letras.",
-            "Dica 2: Está relacionado com um fenômeno da natureza.",
-            "Dica 3: É uma descarga elétrica atmosférica.",
-            "Dica 4: Pode ser visto durante tempestades.",
-            "Dica 5: A luz do relâmpago é muito intensa.",
-            "Dica 6: O som que acompanha é conhecido como trovão.",
-            "Dica 7: Este fenômeno ocorre devido à eletricidade no ar.",
-            "Dica 8: Pode acontecer com grande força e causar danos.",
-            "Dica 9: A velocidade da luz do relâmpago é muito rápida.",
-            "Dica 10: A palavra tem origem no latim."
-        ],
-        meaning: "Relâmpago é um fenômeno atmosférico caracterizado por uma descarga elétrica que acontece entre nuvens ou entre nuvem e solo, gerando uma luz intensa visível."
-    },
+    "word": "Violino",
+    "hints": [
+        "Dica 1: Possui quatro cordas afinadas em intervalos de quintas.",
+        "Dica 2: Está relacionado com música.",
+        "Dica 3: É um instrumento de cordas.",
+        "Dica 4: Começa com 'V' e tem 7 letras.",
+        "Dica 5: É tocado com um arco feito de madeira e crina de cavalo.",
+        "Dica 6: É conhecido por seu som doce e melodioso.",
+        "Dica 7: Faz parte de orquestras e também pode ser tocado solo.",
+        "Dica 8: É um dos menores e mais agudos instrumentos de cordas.",
+        "Dica 9: Sua origem remonta ao século XVI.",
+        "Dica 10: É frequentemente associado à música clássica."
+    ],
+    "meaning": "Violino é um instrumento musical de cordas friccionadas, conhecido por sua versatilidade e som agudo, amplamente utilizado em música clássica, popular e tradicional."
+    }
 ];
 
 
