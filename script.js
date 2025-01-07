@@ -1,20 +1,20 @@
 const words = [
     {
-    "word": "Violino",
+    "word": "Cotidiano",
     "hints": [
-        "Dica 1: Possui quatro cordas afinadas em intervalos de quintas.",
-        "Dica 2: Está relacionado com música.",
-        "Dica 3: É um instrumento de cordas.",
-        "Dica 4: Começa com 'V' e tem 7 letras.",
-        "Dica 5: É tocado com um arco feito de madeira e crina de cavalo.",
-        "Dica 6: É conhecido por seu som doce e melodioso.",
-        "Dica 7: Faz parte de orquestras e também pode ser tocado solo.",
-        "Dica 8: É um dos menores e mais agudos instrumentos de cordas.",
-        "Dica 9: Sua origem remonta ao século XVI.",
-        "Dica 10: É frequentemente associado à música clássica."
+        "Dica 1: Está relacionado à rotina.",
+        "Dica 2: Inclui atividades como trabalhar, estudar e interagir com outras pessoas.",
+        "Dica 3: Começa com 'C' e tem 9 letras.",
+        "Dica 4: Pode ser sinônimo de 'dia a dia'.",
+        "Dica 5: Representa o que é comum e habitual em nossas vidas.",
+        "Dica 6: É tema recorrente na literatura e na música.",
+        "Dica 7: Inclui tarefas simples, como tomar café ou ir ao mercado.",
+        "Dica 8: Pode variar de pessoa para pessoa, dependendo de suas responsabilidades e estilo de vida.",
+        "Dica 9: Pode ser desafiador, mas também uma fonte de estabilidade.",
+        "Dica 10: A rotina de cada um contribui para o seu bem-estar ou desafios diários."
     ],
-    "meaning": "Violino é um instrumento musical de cordas friccionadas, conhecido por sua versatilidade e som agudo, amplamente utilizado em música clássica, popular e tradicional."
-    }
+    "meaning": "Cotidiano refere-se ao conjunto de atividades, hábitos e acontecimentos que fazem parte do dia a dia, da rotina diária de uma pessoa ou de um grupo."
+}
 ];
 
 
